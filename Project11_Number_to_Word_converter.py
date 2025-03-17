@@ -1,3 +1,4 @@
+from colorama import Fore,Style
 ones = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten",
         "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen", "Twenty"]
 
@@ -32,4 +33,8 @@ def number_to_word(n):
 
 while not False:
     num = int(input("Enter a number from 0 - 99,99,99,999: "))
-    print(f"{num} Converted to Words : {number_to_word(num)}")
+    print(f"\033 {Fore.LIGHTBLUE_EX + str(num)} \033[0m Converted to Words :  {Fore.CYAN+number_to_word(num)} ")
+    
+    
+    print(Style.RESET_ALL)
+
