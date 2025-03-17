@@ -87,7 +87,7 @@ print("""
 random_wrd = random.choice(wrd)
 
 # Display underscores representing the unknown word
-print("Guess the Word:", len(random_wrd) * "_")
+print("Guess the Word:", len(random_wrd) * "_ ")
 
 # print(random_wrd)  # Debugging purpose; remove this line in final version
 
@@ -114,6 +114,8 @@ while not game_over:
             corrected += "_"
 
     # If the guessed letter is NOT in the word
+    if user_ip in corrected:
+        print(f"\tYOU ALREADY GUESSED '{user_ip}' ")
     if user_ip not in random_wrd:
         life -= 1  # Reduce life count
         print(f"\tYOU GUESSED '{user_ip}' WHICH IS NOT IN THE WORD, YOU LOSE A LIFE -1!")
@@ -126,8 +128,6 @@ while not game_over:
             exit()
 
     # If the player already guessed the letter
-    if user_ip in corrected:
-        print(f"\tYOU ALREADY GUESSED '{user_ip}' ")
 
     # Display the updated word with correct guesses
     print("\tWord to guess:", display)
