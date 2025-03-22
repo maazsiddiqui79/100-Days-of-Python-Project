@@ -27,13 +27,16 @@ def number_to_word(n):
     
     elif n <= 99_99_99_999:
         return number_to_word(n // 1_00_00_000) + " Core " + (number_to_word(n % 1_00_00_000) if n % 1_00_00_000 != 0 else "")
+    elif n <= 99999_99_99_999:
+        return number_to_word(n // 1_00_00_000) + " Core " + (number_to_word(n % 1_00_00_000) if n % 1_00_00_000 != 0 else "")
+    
     else:
         return "Exceeds the limt.. ."
 
 
 while not False:
-    num = int(input("Enter a number from 0 - 99,99,99,999: "))
-    print(f"\033 {Fore.LIGHTBLUE_EX + str(num)} \033[0m Converted to Words :  {Fore.CYAN+number_to_word(num)} ")
+    num = int(input("Enter a number from 0 - 99999,99,99,999: "))
+    print(f" {Fore.LIGHTBLUE_EX + str(num)}  Converted to Words :  {Fore.CYAN+number_to_word(num)} ")
     
     
     print(Style.RESET_ALL)
