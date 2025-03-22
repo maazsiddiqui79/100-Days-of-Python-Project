@@ -6,12 +6,12 @@ def add_task ():
     user_task = input("Enter your Task: ").lower()
     print("TASK ADDED SUCCESSFULLY !")
     todo_list.append(user_task)
-    # system("cls")
+    
     
 def view_task ():
     print("Tasks :")
     if not todo_list:
-        print("NO TASKS TO REMOVE.")
+        print("NO TASKS.")
     else:
         for i,t in enumerate(todo_list,start=1):
             print(f"{i} - {t}")
@@ -25,6 +25,9 @@ def remove_task ():
     user_del = int(input("Which Task do you want to delete: "))
     # print(todo_list[user_del-1])
     if user_del == 0:
+        pass
+    if user_del > len(todo_list):
+        print("INVALID INPUT")
         pass
     else:
         todo_list.remove(todo_list[user_del-1])

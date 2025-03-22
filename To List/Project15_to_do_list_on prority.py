@@ -4,8 +4,8 @@ todo_list = []
 todo_list_priority = {}
 
 def add_task ():
-    user_task = input("Enter your Task: ").lower()
-    user_task_priority = int(input("Enter your Priority [1 = High , 2 = Medium , 3 = Low]: ").lower())
+    user_task = input("Enter your Task: ")
+    user_task_priority = int(input("Enter your Priority [1 = High , 2 = Medium , 3 = Low]: "))
     if user_task_priority == 1:
         todo_list_priority.update({user_task : "High"})
     elif user_task_priority == 2:
@@ -19,21 +19,29 @@ def add_task ():
 def view_task ():
     print("Tasks :")
     if not todo_list:
-        print("NO TASKS TO REMOVE.")
+        print("NO TASKS.")
     else:
+        priorities = ["High", "Medium", "Low"]
         x=0
-        for k,v in todo_list_priority.items():
-            x+=1
-            print(x, "- [" ,v ,"] " , k )
+        for p in priorities:
+            for k,v in todo_list_priority.items():
+                if v == p:
+                    x+=1
+                    print(x, "- [" ,v ,"] " , k )
+                
+            
         
         # system("cls")
 def remove_task ():
     
     print("Enter '0' for back")
+    priorities = ["High", "Medium", "Low"]
     x=0
-    for k,v in todo_list_priority.items():
-        x+=1
-        print(x, "- [" ,v ,"] " , k )
+    for p in priorities:
+        for k,v in todo_list_priority.items():
+            if v == p:
+                x+=1
+                print(x, "- [" ,v ,"] " , k )
     user_del = int(input("Which Task do you want to delete: "))
     # print(todo_list[user_del-1])
     if user_del == 0:
@@ -51,9 +59,9 @@ def remove_task ():
     
         
 
-
+print("TO DO".center(25,"-"))
 while True:
-    print("\n")
+    
     print (" _______________________ ")
     print ("*                       *")
     print ("|    1. Add Task        |")
