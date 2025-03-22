@@ -1,17 +1,5 @@
-
-from colorama import Fore,Style
 from os import system
-"""
-Welcome to the To-Do List App
----------------------------------
-1. Add Task
-2. View Tasks
-3. Remove Task
-4. Exit
-Enter your choice: 1
-Enter task: Complete Python project
-Task added successfully!
-"""
+
 todo_list = []
 
 def add_task ():
