@@ -57,9 +57,7 @@ def clac ():
             if Continuity == 'n'.lower():
                 system("cls")
                 result =0
-        else:
-            system("cls")
-            result =0
+        
 print(clac())
   
 
