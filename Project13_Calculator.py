@@ -28,9 +28,9 @@ def clac ():
         Continuity = str(input(f"Type 'y' to continue calculating with {result}, or type 'n' to start a new calculation: ").lower())
         
         
-        while Continuity != 'n'.lower():
+        while Continuity == 'y'.lower():
             result2 = result
-            operator = str(input("\n+\n-\n*\n\\ \nEnter operator: "))
+            operator = str(input("\n+\n-\n*\n\ \nEnter operator: "))
             
             num2 = float(input("Enter Second Number: "))
             if operator not in ["+","-","*","/"]:

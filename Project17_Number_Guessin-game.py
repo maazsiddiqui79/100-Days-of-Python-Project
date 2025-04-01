@@ -23,7 +23,7 @@ print("I'm thinking of a number between 1 and 100.")
 while True:
     user_ip = int(input("Choose Your Diffculty. 1 = 'easy' 2 = 'hard': "))
     num = random.randint(1,100)
-    print(num)
+    # print(num)
 
     life = 10 if user_ip == 1 else 5
     

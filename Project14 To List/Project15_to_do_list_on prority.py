@@ -1,17 +1,17 @@
 from os import system
 
 todo_list = []
-todo_list_priority = {}
+todo_dict_priority = {}
 
 def add_task ():
     user_task = input("Enter your Task: ")
     user_task_priority = int(input("Enter your Priority [1 = High , 2 = Medium , 3 = Low]: "))
     if user_task_priority == 1:
-        todo_list_priority.update({user_task : "High"})
+        todo_dict_priority.update({user_task : "High"})
     elif user_task_priority == 2:
-        todo_list_priority.update({user_task : "Medium"})
+        todo_dict_priority.update({user_task : "Medium"})
     elif user_task_priority == 3:
-        todo_list_priority.update({user_task : "Low"})
+        todo_dict_priority.update({user_task : "Low"})
     print("TASK ADDED SUCCESSFULLY !")
     todo_list.append(user_task)
     # system("cls")
@@ -24,7 +24,7 @@ def view_task ():
         priorities = ["High", "Medium", "Low"]
         x=0
         for p in priorities:
-            for k,v in todo_list_priority.items():
+            for k,v in todo_dict_priority.items():
                 if v == p:
                     x+=1
                     print(x, "- [" ,v ,"] " , k )
@@ -38,7 +38,7 @@ def remove_task ():
     priorities = ["High", "Medium", "Low"]
     x=0
     for p in priorities:
-        for k,v in todo_list_priority.items():
+        for k,v in todo_dict_priority.items():
             if v == p:
                 x+=1
                 print(x, "- [" ,v ,"] " , k )
@@ -51,7 +51,7 @@ def remove_task ():
         pass
         
     else:
-        todo_list_priority.pop(todo_list[user_del-1])
+        todo_dict_priority.pop(todo_list[user_del-1])
         print("TASK REMOVED SUCCESSFULLY")
         
     
