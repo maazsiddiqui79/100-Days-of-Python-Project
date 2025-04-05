@@ -48,7 +48,7 @@ while True:
         print("You have",Fore.RED + str(life) ," attempts remaining to guess the number.")
         if life == 0:
             print(Fore.RED+"🔴 Game Over! You couldn't guess the right number.")
-            print(Fore.GREEN+Back.LIGHTYELLOW_EX+f"\tThe Correct Number was {user_num_ip}")
+            print(Fore.GREEN+Back.LIGHTYELLOW_EX+f"The Correct Number was {user_num_ip}".center(60," "))
             break
             
             

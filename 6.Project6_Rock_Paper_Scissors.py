@@ -34,6 +34,7 @@ score = 0  # Player score
 p1_scr = 0  # Player 1 score (Multiplayer)
 p2_scr = 0  # Player 2 score (Multiplayer)
 
+
 def comp():
     """Handles the single-player mode where the player competes against the computer."""
     global score
